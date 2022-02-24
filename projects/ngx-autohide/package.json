@@ -1,6 +1,6 @@
 {
   "name": "ngx-autohide",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "This library is used to automatically hide an Angular Component.",
   "keywords": ["auto-hide", "fadeout"],
   "peerDependencies": {

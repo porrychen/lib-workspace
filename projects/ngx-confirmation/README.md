@@ -1,24 +1,56 @@
 # NgxConfirmation
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0.
+This library is used to open a custom confirmation dialog.
 
-## Code scaffolding
+## ⚙️ Installation
 
-Run `ng generate component component-name --project ngx-confirmation` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-confirmation`.
-> Note: Don't forget to add `--project ngx-confirmation` or else it will be added to the default project in your `angular.json` file. 
+```bash
+npm install ngx-confirmation --save
+```
+## 📖 Usage
 
-## Build
+```javascript
+import { NgxConfirmationService } from 'ngx-autohide';
 
-Run `ng build ngx-confirmation` to build the project. The build artifacts will be stored in the `dist/` directory.
+export class SettingsComponent {
 
-## Publishing
+  constructor(
+    private authService: AuthService,
+    private confirmationService: NgxConfirmationService
+  ) { }
 
-After building your library with `ng build ngx-confirmation`, go to the dist folder `cd dist/ngx-confirmation` and run `npm publish`.
+  onLogOut() {
+    // Open confirmation dialog
+    const confirmation = this.confirmationService.open({
+      title: 'Log out',
+      icon: {
+        name: 'information',
+        color: "primary"
+      },
+      message: 'Are you sure that you want to log out?',
+      actions: {
+        confirm: {
+          label: 'Yes',
+          color: 'primary'
+        },
+        cancel: {
+          label: 'No'
+        }
+      },
+      disableClose: false
+    });
 
-## Running unit tests
+    // logout after confirmed
+    confirmation.afterClosed().subscribe((result) => {
+      if (result === 'confirmed') {
+        // call service logout method
+        this.authService.logout();
+        location.reload();
+      }
+    })
+  }
+}
+```
 
-Run `ng test ngx-confirmation` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## ☀️ License
+[MIT]
