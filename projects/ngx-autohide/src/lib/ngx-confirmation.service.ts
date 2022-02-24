@@ -17,7 +17,7 @@ export class NgxConfirmationService {
 
   /**
    * is Object or not
-   * @param obj 
+   * @param obj
    * @returns boolean
    */
    private isObject = (obj: any) => obj && typeof obj === 'object';
@@ -48,7 +48,7 @@ export class NgxConfirmationService {
 
   /**
    * open a confirmation dialog
-   * @param config 
+   * @param config
    * @returns MatDialogRef<ConfirmationDialogComponent>
    */
    open(config: NgxConfirmationConfig): MatDialogRef<NgxConfirmationDialogComponent> {
@@ -56,7 +56,7 @@ export class NgxConfirmationService {
 
     return this.dialog.open(NgxConfirmationDialogComponent, {
       autoFocus: false,
-      disableClose: finalConfig.disableClose || true,
+      disableClose: finalConfig.disableClose ?? true,
       data: finalConfig,
       panelClass: 'confirmation-dialog-panel'
     });
@@ -65,7 +65,7 @@ export class NgxConfirmationService {
 
 export interface NgxConfirmationConfig {
   title?: string;
-  
+
   icon?: {
     name?: string;
     color?: 'primary' | 'accent' | 'warn' | 'basic';
