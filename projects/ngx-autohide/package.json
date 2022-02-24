@@ -1,15 +1,13 @@
 {
   "name": "ngx-autohide",
-  "version": "2.0.11",
-  "description": "This library is used to automatically hide an Angular Component and open a custom confirmation dialog.",
-  "keywords": ["auto-hide", "fadeout", "material", "confirmation dialog"],
+  "version": "2.0.12",
+  "description": "This library is used to automatically hide an Angular Component.",
+  "keywords": ["auto-hide", "fadeout"],
   "peerDependencies": {
     "@angular/animations": "~13.1.0",
-    "@angular/cdk": "^13.2.3",
     "@angular/common": "^13.1.0",
     "@angular/core": "^13.1.0",
-    "@angular/forms": "~13.1.0",
-    "@angular/material": "^13.2.3"
+    "@angular/forms": "~13.1.0"
   },
   "license": "MIT",
   "dependencies": {
@@ -17,6 +15,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/porrychen/ngx-autohide"
+    "url": "https://github.com/porrychen/ngx-autohide/tree/master/projects/ngx-autohide"
   }
 }

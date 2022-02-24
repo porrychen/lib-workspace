@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { NgxConfirmationConfig } from './ngx-confirmation.service';
+import { NgxConfirmationConfig } from '../ngx-confirmation.service';
 
 @Component({
   selector: 'ngx-confirmation-dialog',

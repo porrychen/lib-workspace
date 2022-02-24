@@ -1,0 +1,20 @@
+{
+  "name": "ngx-confirmation",
+  "version": "1.0.0",
+  "description": "This library is used to open a custom confirmation dialog.",
+  "keywords": ["material", "confirmation dialog"],
+  "peerDependencies": {
+    "@angular/cdk": "^13.2.3",
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0",
+    "@angular/material": "^13.2.3"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/porrychen/ngx-autohide"
+  }
+}

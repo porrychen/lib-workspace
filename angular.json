@@ -33,6 +33,37 @@
           }
         }
       }
+    },
+    "ngx-confirmation": {
+      "projectType": "library",
+      "root": "projects/ngx-confirmation",
+      "sourceRoot": "projects/ngx-confirmation/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-confirmation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-confirmation/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-confirmation/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-confirmation/src/test.ts",
+            "tsConfig": "projects/ngx-confirmation/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-confirmation/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-autohide"

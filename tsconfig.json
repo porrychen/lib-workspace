@@ -15,6 +15,10 @@
       "ngx-autohide": [
         "dist/ngx-autohide/ngx-autohide",
         "dist/ngx-autohide"
+      ],
+      "ngx-confirmation": [
+        "dist/ngx-confirmation/ngx-confirmation",
+        "dist/ngx-confirmation"
       ]
     },
     "declaration": false,

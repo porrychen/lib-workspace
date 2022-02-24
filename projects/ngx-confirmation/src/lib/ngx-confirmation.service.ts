@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { NgxConfirmationDialogComponent } from './ngx-confirmation.dialog.component';
+import { NgxConfirmationDialogComponent } from './dialogs/ngx-confirmation.dialog.component';
 
 @Injectable({
   providedIn: 'root'
