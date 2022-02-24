@@ -1,6 +1,8 @@
 {
   "name": "ngx-autohide",
-  "version": "2.0.1",
+  "version": "2.0.11",
+  "description": "This library is used to automatically hide an Angular Component and open a custom confirmation dialog.",
+  "keywords": ["auto-hide", "fadeout", "material", "confirmation dialog"],
   "peerDependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/cdk": "^13.2.3",
