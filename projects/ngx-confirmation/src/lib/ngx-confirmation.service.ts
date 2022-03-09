@@ -51,10 +51,21 @@ export class NgxConfirmationService {
    * @param config
    * @returns MatDialogRef<ConfirmationDialogComponent>
    */
-   open(config: NgxConfirmationConfig): MatDialogRef<NgxConfirmationDialogComponent> {
+  open(config: NgxConfirmationConfig): MatDialogRef<NgxConfirmationDialogComponent> {
     const finalConfig: NgxConfirmationConfig = this.deepMerge(DEFAULT_CONFIRMATION_CONFIG, config);
 
     return this.dialog.open(NgxConfirmationDialogComponent, {
+      autoFocus: false,
+      disableClose: finalConfig.disableClose ?? true,
+      data: finalConfig,
+      panelClass: 'confirmation-dialog-panel'
+    });
+  }
+
+  alert(config: NgxConfirmationConfig): void {
+    const finalConfig: NgxConfirmationConfig = this.deepMerge(DEFAULT_INFORMATION_CONFIG, config);
+
+    this.dialog.open(NgxConfirmationDialogComponent, {
       autoFocus: false,
       disableClose: finalConfig.disableClose ?? true,
       data: finalConfig,
@@ -100,6 +111,22 @@ export const DEFAULT_CONFIRMATION_CONFIG: NgxConfirmationConfig = {
     },
     cancel: {
       label: 'Cancel'
+    }
+  },
+  disableClose: true
+}
+
+export const DEFAULT_INFORMATION_CONFIG: NgxConfirmationConfig = {
+  title: 'Information',
+  icon: {
+    name: 'information',
+    color: 'accent'
+  },
+  message: 'This is only information for you!',
+  actions: {
+    confirm: {
+      label: 'OK',
+      color: 'accent'
     }
   },
   disableClose: true

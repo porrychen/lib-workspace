@@ -10,7 +10,7 @@
 </div>
 
 <mat-dialog-actions align="end">
-  <button mat-stroked-button [matDialogClose]="'cancelled'">
+  <button mat-stroked-button [matDialogClose]="'cancelled'" *ngIf="data.actions && data.actions!.cancel">
     {{data.actions!.cancel!.label}}
   </button>
 

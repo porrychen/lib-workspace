@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 // Components
@@ -13,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
     NgxConfirmationDialogComponent
   ],
   imports: [
+    CommonModule,
+
     MatButtonModule,
     MatDialogModule,
     MatIconModule
